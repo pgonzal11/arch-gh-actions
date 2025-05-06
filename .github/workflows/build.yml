@@ -15,7 +15,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: run tests
-        run: mvn clean tests | tee test.log
+        run: mvn clean test | tee test.log
       - name: build artifacts
         run: mvn clean package -Dmaven.test.skip
       - name: set up artifacts
